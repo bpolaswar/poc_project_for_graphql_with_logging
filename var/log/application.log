@@ -1,0 +1,4 @@
+2021-02-08T22:20:16.492+0530 INFO Starting GraphqlexampleApplication using Java 11.0.10 on LAPTOP-MMQ49KLH with PID 11956 (C:\Users\BHUMESH\Downloads\example\example\target\classes started by BHUMESH in C:\Users\BHUMESH\Downloads\example\example)
+2021-02-08T22:20:16.505+0530 DEBUG Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-02-08T22:20:16.506+0530 INFO No active profile set, falling back to default profiles: default
+2021-02-08T22:20:24.895+0530 INFO Started GraphqlexampleApplication in 8.854 seconds (JVM running for 10.106)

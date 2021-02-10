@@ -1,0 +1,50 @@
+#scalar Json
+type Employee {
+    eid: ID
+    fname: String
+    lname: String
+    salary: String
+    department: Department
+}
+
+type Department {
+	id : ID
+	name : String
+	employees : [Employee]
+}
+
+type Query {
+    allEmployees:[Employee]
+    getEmployeeById(empId : Int!): Employee
+    
+    deptList:[Department]
+    getDepartmentById(deptId : Int!): Department
+}
+
+input EmployeeInput {
+	eid: ID
+    fname: String
+    lname: String
+    salary: String
+    deptId: Int
+}
+
+input DepartmentInput {
+	id : ID
+    name : String
+}
+
+type Mutation{
+	createEmp(employeeInput:EmployeeInput): Employee
+	updateEmp(employeeInput: EmployeeInput) : Employee
+	deleteEmp(empId: Int) : String
+	
+	createDepartment(departmentInput : DepartmentInput): Department
+	updateDept(departmentInput : DepartmentInput) : Department
+	deleteDept(deptId : Int) : String	
+}
+
+schema{
+	  query: Query
+	  mutation: Mutation
+}
