@@ -7,5 +7,7 @@ import com.graphql.example.model.Department;
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
 	public Department getDeptByName(String name);
+	
+	public Department getDepartmentByPrevVersionId(Long prevVersionId);
 
 }
