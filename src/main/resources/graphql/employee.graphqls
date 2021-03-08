@@ -11,6 +11,7 @@ type Department {
 	id : ID
 	name : String
 	employees : [Employee]
+	active : Boolean
 }
 
 type Query {

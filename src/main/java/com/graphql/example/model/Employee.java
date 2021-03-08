@@ -14,6 +14,7 @@ import org.hibernate.annotations.Where;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
@@ -24,7 +25,8 @@ import lombok.experimental.SuperBuilder;
 @Table(name = "employee")
 @Where(clause = "active = true")
 @NoArgsConstructor
-public class Employee extends Common{
+@EqualsAndHashCode(callSuper = false)
+public class Employee extends Common {
 	@Column(name = "eid")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,8 +34,7 @@ public class Employee extends Common{
 	private String fname;
 	private String lname;
 	private String salary;
-	
-	@ManyToOne//(fetch = FetchType.LAZY)
+	@ManyToOne // (fetch = FetchType.LAZY)
 	@JoinColumn(name = "did")
 	private Department department;
 }

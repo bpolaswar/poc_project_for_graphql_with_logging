@@ -1,4 +1,4 @@
-package com.graphql.example.query;
+package com.graphql.example.context;
 
 import java.util.List;
 import java.util.Map;

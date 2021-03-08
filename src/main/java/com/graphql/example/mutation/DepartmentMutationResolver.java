@@ -1,4 +1,4 @@
-package com.graphql.example.query;
+package com.graphql.example.mutation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
